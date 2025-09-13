@@ -1,0 +1,27 @@
+.page__main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  font-family: "Sansation", sans-serif;
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
+    ),
+    url(/images/fondo_landing.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #482427;
+}
+
+.icon {
+  height: 50px;
+  margin: 20px;
+}
+
+.landing-btn {
+  padding: 10px 50px;
+  letter-spacing: 2px;
+}
