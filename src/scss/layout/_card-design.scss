@@ -4,7 +4,7 @@
   justify-content: center;
   height: 100vh;
   width: 100%;
-  margin-top: 100px;
+  padding: 100px;
   gap: 200px;
   color: #482427;
   background: linear-gradient(
@@ -65,8 +65,11 @@ button {
 }
 
 .card-content {
+  display: flex;
+  flex-direction: row;
   margin-top: 70px;
   font-size: 30px;
+  gap: 70px;
 }
 
 .birthday {
@@ -85,4 +88,9 @@ button {
   background: url(/images/valentin.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+.image-value {
+  width: 230px;
+  height: 230px;
 }

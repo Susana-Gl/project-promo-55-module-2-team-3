@@ -1,6 +1,6 @@
-'use strict';
+"use strict";
 
-console.log('>> Ready :)');
+console.log(">> Ready :)");
 
 const background = document.getElementById("background");
 
@@ -21,20 +21,52 @@ const imageValue = document.querySelector(".image-value");
 const senderValue = document.querySelector(".sender-value");
 
 const handleChangeSelect = () => {
-    const backgroundResult = background.value;
-    
-    if (backgroundResult === "birthday") {
-        previewCard.classList.add("birthday");
-        previewCard.classList.remove("christmas", "valentine");
-    } else if (backgroundResult === "christmas") {
-        previewCard.classList.add("christmas");
-        previewCard.classList.remove("birthday", "valentine");
-    } else {
-        previewCard.classList.add("valentine");
-        previewCard.classList.remove("christmas", "birthday");
-    }
-    console.log(backgroundResult);
+  const backgroundResult = background.value;
+
+  if (backgroundResult === "birthday") {
+    previewCard.classList.add("birthday");
+    previewCard.classList.remove("christmas", "valentine");
+  } else if (backgroundResult === "christmas") {
+    previewCard.classList.add("christmas");
+    previewCard.classList.remove("birthday", "valentine");
+  } else {
+    previewCard.classList.add("valentine");
+    previewCard.classList.remove("christmas", "birthday");
+  }
+  console.log(backgroundResult);
 };
 
 background.addEventListener("change", handleChangeSelect);
 
+nameInput.addEventListener("input", () => {
+  nameValue.textContent = "Para " + nameInput.value;
+});
+
+emailInput.addEventListener("input", () => {
+  emailValue.textContent = emailInput.value;
+});
+
+dateInput.addEventListener("input", () => {
+  dateValue.textContent = dateInput.value;
+});
+
+messageInput.addEventListener("input", () => {
+  messageValue.textContent = messageInput.value;
+});
+
+senderInput.addEventListener("input", () => {
+  senderValue.textContent = senderInput.value;
+});
+
+// Duda Ana !
+
+imageInput.addEventListener("change", () => {
+  const file = imageInput.files[0];
+  if (file) {
+    const reader = new FileReader();
+    reader.onload = () => {
+      imageValue.src = reader.result;
+    };
+    reader.readAsDataURL(file);
+  }
+});

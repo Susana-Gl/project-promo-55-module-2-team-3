@@ -8,57 +8,73 @@
       href="https://fonts.google.com/specimen/Sansation?categoryFilters=Feeling:%2FExpressive%2FBusiness"
       rel="stylesheet"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Imperial+Script&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Imperial+Script&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./scss/main.scss" />
     <link rel="icon" href="./images/favicon.png" />
   </head>
 
   <body>
-      <main class="main-card">
-        <div class="form-card">
-          <form>
-            <div class="design-card">
-              <h2>Diseña</h2>
-              <p>Escoge la ocasión</p>
-              <select name="background" id="background">
-                <option value="birthday">Cumpleaños</option>
-                <option value="christmas">Navidad</option>
-                <option value="valentine">San Valentín</option>
-              </select>
-            </div>
-            <div class="info-card">
-              <h2>Rellena</h2>
-              <p>¿Para quién es?</p>
-              <input class="name-input" placeholder="Para:" required />
-              <input type="email" class="email-input" placeholder="email del destinatario" required />
-              <p>¿Cuándo quieres enviarla?</p>
-              <input class="date-input" type="date" />
-              <p>Tu mensaje</p>
-              <input class="message-input" placeholder="Escribe aquí tu mensaje" required />
-              <p>Añade una imagen</p>
-              <input class="image-input" type="file" accept="image/*" />
-              <p>De parte de:</p>
-              <input class="sender-input" placeholder="Tu nombre" required />
-            </div>
-          </form>
-        </div>
-        <div class="preview-container">
-          <button class="reset-btn">Resetear Diseño</button>
-          <div class="preview-card">
-            <p class="date-value">01/01/2026</p>
-            <div class="card-content">
+    <main class="main-card">
+      <div class="form-card">
+        <form>
+          <div class="design-card">
+            <h2>Diseña</h2>
+            <p>Escoge la ocasión</p>
+            <select name="background" id="background">
+              <option value="birthday">Cumpleaños</option>
+              <option value="christmas">Navidad</option>
+              <option value="valentine">San Valentín</option>
+            </select>
+          </div>
+          <div class="info-card">
+            <h2>Rellena</h2>
+            <p>¿Para quién es?</p>
+            <input class="name-input" placeholder="Para:" required />
+            <input
+              type="email"
+              class="email-input"
+              placeholder="email del destinatario"
+              required
+            />
+            <p>¿Cuándo quieres enviarla?</p>
+            <input class="date-input" type="date" />
+            <p>Tu mensaje</p>
+            <input
+              class="message-input"
+              placeholder="Escribe aquí tu mensaje"
+              required
+            />
+            <p>Añade una imagen</p>
+            <input class="image-input" type="file" accept="image/*" />
+            <p>De parte de:</p>
+            <input class="sender-input" placeholder="Tu nombre" required />
+          </div>
+        </form>
+      </div>
+      <div class="preview-container">
+        <button class="reset-btn">Resetear Diseño</button>
+        <div class="preview-card">
+          <p class="date-value">01/01/2026</p>
+          <div class="card-content">
+            <div class="card-text">
               <p class="name-value">Para Lucía</p>
               <p class="email-value">lucia@gmail.com</p>
               <p class="message-value">¡Feliz cumpleaños!</p>
-              <img class="image-value" src="" />
               <p class="sender-value">María</p>
+            </div>
+            <div class="image-container">
+              <img class="image-value" src="" />
             </div>
           </div>
         </div>
-      </main>
+      </div>
+    </main>
 
-      <script src="./js/main.js"></script>
+    <script src="./js/main.js"></script>
   </body>
 </html>
