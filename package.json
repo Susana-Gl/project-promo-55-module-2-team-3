@@ -26,5 +26,8 @@
 	},
 	"author": "Adalab",
 	"license": "MIT",
-	"homepage": "https://github.com/adalab/adalab-web-starter-kit"
+	"homepage": "https://github.com/adalab/adalab-web-starter-kit",
+	"dependencies": {
+		"dom-to-image": "^2.6.0"
+	}
 }

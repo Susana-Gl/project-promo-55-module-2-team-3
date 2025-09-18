@@ -1,5 +1,7 @@
 "use strict";
 
+import "./share.js";
+
 console.log(">> Ready :)");
 
 const background = document.getElementById("background");
