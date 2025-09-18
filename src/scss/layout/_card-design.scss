@@ -2,8 +2,6 @@
   font-family: "Sansation", sans-serif;
   display: flex;
   justify-content: center;
-  height: 100vh;
-  width: 100%;
   padding: 100px;
   gap: 200px;
   color: #482427;
@@ -14,6 +12,42 @@
     url(/images/fondo_landing.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+.accordion-section {
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  overflow: hidden;
+  background-color: transparent;
+}
+
+.accordion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  cursor: pointer;
+  background-color: #f0f0f0;
+  font-weight: bold;
+  border-bottom: 1px solid #ccc;
+}
+
+.accordion-icon {
+  transition: transform 0.3s ease;
+}
+
+.accordion-content {
+  display: none;
+  padding: 12px;
+}
+
+.accordion-section.active .accordion-content {
+  display: block;
+}
+
+.accordion-section.active .accordion-icon {
+  transform: rotate(180deg);
 }
 
 p {

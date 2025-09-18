@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Adalab Web Starter Kit</title>
+    <title>Una carta para ti</title>
     <link
       href="https://fonts.google.com/specimen/Sansation?categoryFilters=Feeling:%2FExpressive%2FBusiness"
       rel="stylesheet"
@@ -15,45 +15,60 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./scss/main.scss" />
-    <link rel="icon" href="./images/favicon.png" />
+    <link rel="icon" href="./images/sobre-icono.jpg" />
   </head>
 
   <body>
     <main class="main-card">
       <div class="form-card">
         <form>
-          <div class="design-card">
-            <h2>Diseña</h2>
-            <p>Escoge la ocasión</p>
-            <select name="background" id="background">
-              <option value="birthday">Cumpleaños</option>
-              <option value="christmas">Navidad</option>
-              <option value="valentine">San Valentín</option>
-            </select>
+          <div class="accordion-section">
+            <div class="accordion-header">
+              <h2>Diseña</h2>
+              <span class="accordion-icon">▼</span>
+            </div>
+            <div class="accordion-content">
+              <div class="design-card">
+                <p>Escoge la ocasión</p>
+                <select name="background" id="background">
+                  <option value="birthday">Cumpleaños</option>
+                  <option value="christmas">Navidad</option>
+                  <option value="valentine">San Valentín</option>
+                </select>
+              </div>
+            </div>
           </div>
-          <div class="info-card">
-            <h2>Rellena</h2>
-            <p>¿Para quién es?</p>
-            <input class="name-input" placeholder="Para:" required />
-            <input
-              type="email"
-              class="email-input"
-              placeholder="email del destinatario"
-              required
-            />
-            <p>¿Cuándo quieres enviarla?</p>
-            <input class="date-input" type="date" />
-            <p>Tu mensaje</p>
-            <input
-              class="message-input"
-              placeholder="Escribe aquí tu mensaje"
-              required
-            />
-            <p>Añade una imagen</p>
-            <input class="image-input" type="file" accept="image/*" />
-            <p>De parte de:</p>
-            <input class="sender-input" placeholder="Tu nombre" required />
+          <div class="accordion-section">
+            <div class="accordion-header">
+              <h2>Rellena</h2>
+              <span class="accordion-icon">▼</span>
+            </div>
+            <div class="accordion-content">
+              <div class="info-card">
+                <p>¿Para quién es?</p>
+                <input class="name-input" placeholder="Para:" required />
+                <input
+                  type="email"
+                  class="email-input"
+                  placeholder="email del destinatario"
+                  required
+                />
+                <p>¿Cuándo quieres enviarla?</p>
+                <input class="date-input" type="date" />
+                <p>Tu mensaje</p>
+                <input
+                  class="message-input"
+                  placeholder="Escribe aquí tu mensaje"
+                  required
+                />
+                <p>Añade una imagen</p>
+                <input class="image-input" type="file" accept="image/*" />
+                <p>De parte de:</p>
+                <input class="sender-input" placeholder="Tu nombre" required />
+              </div>
+            </div>
           </div>
+          <button type="button" class="create-card-btn">Crear Tarjeta</button>
         </form>
       </div>
       <div class="preview-container">

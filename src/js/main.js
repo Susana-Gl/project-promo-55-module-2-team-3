@@ -20,6 +20,15 @@ const messageValue = document.querySelector(".message-value");
 const imageValue = document.querySelector(".image-value");
 const senderValue = document.querySelector(".sender-value");
 
+const accordionHeaders = document.querySelectorAll(".accordion-header");
+
+accordionHeaders.forEach((header) => {
+  header.addEventListener("click", () => {
+    const section = header.parentElement;
+    section.classList.toggle("active");
+  });
+});
+
 const handleChangeSelect = () => {
   const backgroundResult = background.value;
 
