@@ -13,6 +13,8 @@ const messageInput = document.querySelector(".message-input");
 const imageInput = document.querySelector(".image-input");
 const senderInput = document.querySelector(".sender-input");
 
+const resetButton = document.querySelector(".reset-btn");
+
 const previewCard = document.querySelector(".preview-card");
 
 const nameValue = document.querySelector(".name-value");
@@ -30,6 +32,21 @@ accordionHeaders.forEach((header) => {
     section.classList.toggle("active");
   });
 });
+
+const handleClickReset = () => {
+    nameInput.value = "";
+    nameValue.textContent = "Para Lucía";
+    emailInput.value = "";
+    emailValue.textContent = "lucia@gmail.com";
+    dateInput.value= "";
+    dateValue.textContent = "01/01/2026";
+    messageInput.value = "";
+    messageValue.textContent = "¡Feliz cumpleaños!";
+    senderInput.value = "";
+    senderValue.textContent = "María";
+}
+
+resetButton.addEventListener("click", handleClickReset);
 
 const handleChangeSelect = () => {
   const backgroundResult = background.value;
