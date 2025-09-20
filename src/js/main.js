@@ -4,7 +4,11 @@ import "./share.js";
 
 console.log(">> Ready :)");
 
+// let savedName = localstorage.getItem("name");
+// nameValue.appendchild(savedName);
+
 const background = document.getElementById("background");
+
 
 const nameInput = document.querySelector(".name-input");
 const emailInput = document.querySelector(".email-input");
@@ -24,7 +28,33 @@ const messageValue = document.querySelector(".message-value");
 const imageValue = document.querySelector(".image-value");
 const senderValue = document.querySelector(".sender-value");
 
+if (localStorage.getItem("name")) {
+  nameInput.value = localStorage.getItem("name");
+  nameValue.textContent = "Para " + nameInput.value;
+}
+
+if (localStorage.getItem("email")) {
+  emailInput.value = localStorage.getItem("email");
+  emailValue.textContent = emailInput.value;
+}
+
+if (localStorage.getItem("date")) {
+  dateInput.value = localStorage.getItem("date");
+  dateValue.textContent = dateInput.value;
+}
+
+if (localStorage.getItem("message")) {
+  messageInput.value = localStorage.getItem("message");
+  messageValue.textContent = messageInput.value;
+}
+
+if (localStorage.getItem("sender")) {
+  senderInput.value = localStorage.getItem("sender");
+  senderValue.textContent = senderInput.value;
+}
+
 const accordionHeaders = document.querySelectorAll(".accordion-header");
+
 
 accordionHeaders.forEach((header) => {
   header.addEventListener("click", () => {
@@ -61,29 +91,40 @@ const handleChangeSelect = () => {
     previewCard.classList.add("valentine");
     previewCard.classList.remove("christmas", "birthday");
   }
-  console.log(backgroundResult);
+  localStorage.setItem ("background", backgroundResult);
 };
 
 background.addEventListener("change", handleChangeSelect);
 
+if (localStorage.getItem("background")) {
+  background.value = localStorage.getItem("background");
+  handleChangeSelect ();
+  console.log(background.value);
+}
+
 nameInput.addEventListener("input", () => {
   nameValue.textContent = "Para " + nameInput.value;
+  localStorage.setItem ("name", nameInput.value);
 });
 
 emailInput.addEventListener("input", () => {
   emailValue.textContent = emailInput.value;
+  localStorage.setItem ("email", emailInput.value);
 });
 
 dateInput.addEventListener("input", () => {
   dateValue.textContent = dateInput.value;
+  localStorage.setItem ("date", dateInput.value);
 });
 
 messageInput.addEventListener("input", () => {
   messageValue.textContent = messageInput.value;
+  localStorage.setItem ("message", messageInput.value);
 });
 
 senderInput.addEventListener("input", () => {
   senderValue.textContent = senderInput.value;
+  localStorage.setItem ("sender", senderInput.value);
 });
 
 // Duda Ana !
@@ -93,7 +134,9 @@ imageInput.addEventListener("change", () => {
   if (file) {
     const reader = new FileReader();
     reader.onload = () => {
-      imageValue.src = reader.result;
+      const saveImage = reader.result;
+      imageValue.src = saveImage;
+      localStorage.setItem ("image", saveImage);
     };
     reader.readAsDataURL(file);
   }
@@ -104,5 +147,11 @@ let imageDefault = "";
 if (imageDefault !== "") {
   imageValue.src = imageDefault;
 } else {
-  imageValue.src = "./images/230x230.png";
+  imageValue.src = "./images/default.png";
+}
+
+if (localStorage.getItem("image")) {
+  imageInput.value = localStorage.getItem("image");
+  imageValue.src = saveImage.value;
+  console.log(saveImage);
 }

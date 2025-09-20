@@ -12,7 +12,7 @@
     url(/images/fondo_landing.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  //height: 100vh;
+  min-height: 100vh;
 }
 
 .accordion-section {
@@ -152,8 +152,8 @@ button {
     gap: 20px;
   }
   .preview-card {
-    width: 400px;
-    height: 250px;
+    width: 571px;
+    height: 357px;
     padding: 5px;
   }
 
@@ -163,11 +163,51 @@ button {
 
   .card-text {
     font-size: 15px;
-    width: 100px;
+    width: 170px;
   }
 
   .image-value {
-    width: 115px;
-    height: 115px;
+    width: 150px;
+    height: 150px;
   }
+}
+
+@media screen and (max-width: 736px) {
+  .main-card {
+    padding: 20px;
+  }
+  .preview-card {
+    width: 316px;
+    height: 197px;
+  }
+
+  .message-input, .image-input {
+    width: 300px;
+  }
+
+  .image-value {
+    height: 75px;
+    width: 75px;
+  }
+
+  .date-value, .email-value {
+    font-size: 8px;
+  }
+
+  .card-text {
+    font-size: 10px;
+  }
+
+  .card-content {
+    width: 200px;
+  }
+
+  p {
+    padding: 5px;
+  }
+
+  .create-card-btn, .reset-btn {
+    font-size: 12px;
+  }
+
 }
