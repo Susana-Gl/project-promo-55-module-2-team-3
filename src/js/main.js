@@ -34,17 +34,17 @@ accordionHeaders.forEach((header) => {
 });
 
 const handleClickReset = () => {
-    nameInput.value = "";
-    nameValue.textContent = "Para Lucía";
-    emailInput.value = "";
-    emailValue.textContent = "lucia@gmail.com";
-    dateInput.value= "";
-    dateValue.textContent = "01/01/2026";
-    messageInput.value = "";
-    messageValue.textContent = "¡Feliz cumpleaños!";
-    senderInput.value = "";
-    senderValue.textContent = "María";
-}
+  nameInput.value = "";
+  nameValue.textContent = "Para Lucía";
+  emailInput.value = "";
+  emailValue.textContent = "lucia@gmail.com";
+  dateInput.value = "";
+  dateValue.textContent = "01/01/2026";
+  messageInput.value = "";
+  messageValue.textContent = "¡Feliz cumpleaños!";
+  senderInput.value = "";
+  senderValue.textContent = "María";
+};
 
 resetButton.addEventListener("click", handleClickReset);
 
@@ -98,3 +98,11 @@ imageInput.addEventListener("change", () => {
     reader.readAsDataURL(file);
   }
 });
+
+let imageDefault = "";
+
+if (imageDefault !== "") {
+  imageValue.src = imageDefault;
+} else {
+  imageValue.src = "./images/230x230.png";
+}

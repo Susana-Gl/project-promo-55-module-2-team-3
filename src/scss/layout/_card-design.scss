@@ -12,6 +12,7 @@
     url(/images/fondo_landing.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  //height: 100vh;
 }
 
 .accordion-section {
@@ -19,7 +20,7 @@
   margin-bottom: 10px;
   border-radius: 5px;
   overflow: hidden;
-  background-color: transparent;
+  background-color: #f2f2f2;
 }
 
 .accordion-header {
@@ -28,7 +29,7 @@
   align-items: center;
   padding: 12px;
   cursor: pointer;
-  background-color: #f0f0f0;
+  background-color: #e8d1bb;
   font-weight: bold;
   border-bottom: 1px solid #ccc;
 }
@@ -59,7 +60,8 @@ p {
 }
 
 input,
-input::placeholder {
+input::placeholder,
+textarea {
   padding: 10px;
   margin: 10px 0 10px 10px;
   border-radius: 5px;
@@ -78,19 +80,29 @@ select {
 }
 
 button {
-  padding: 10px;
   border-radius: 5px;
   border: none;
   background-color: #482427;
   color: white;
   margin-bottom: 30px;
+  padding: 10px 30px;
+  letter-spacing: 2px;
+  color: white;
+  text-decoration: none;
+  letter-spacing: 2px;
+}
+
+.reset-btn {
+  padding: 10px 30px;
+  margin-top: 20px;
 }
 
 .preview-card {
   background: url(/images/cumple.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  font-family: "Imperial Script", cursive;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
   font-size: 12px;
   font-weight: bold;
   width: 800px;
@@ -102,8 +114,12 @@ button {
   display: flex;
   flex-direction: row;
   margin-top: 70px;
-  font-size: 30px;
-  gap: 70px;
+  font-size: 20px;
+  gap: 25px;
+}
+
+.card-text {
+  width: 250px;
 }
 
 .birthday {
@@ -129,8 +145,29 @@ button {
   height: 230px;
 }
 
-.create-card-btn {
-  padding: 10px 50px;
-  letter-spacing: 2px;
-  color: white;
+@media screen and (max-width: 1024px) {
+  .main-card {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .preview-card {
+    width: 400px;
+    height: 250px;
+    padding: 5px;
+  }
+
+  .card-content {
+    margin: 10px;
+  }
+
+  .card-text {
+    font-size: 15px;
+    width: 100px;
+  }
+
+  .image-value {
+    width: 115px;
+    height: 115px;
+  }
 }

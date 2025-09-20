@@ -56,11 +56,13 @@
                 <p>¿Cuándo quieres enviarla?</p>
                 <input class="date-input" type="date" />
                 <p>Tu mensaje</p>
-                <input
+                <textarea
+                  rows="6"
+                  cols="40"
                   class="message-input"
                   placeholder="Escribe aquí tu mensaje"
                   required
-                />
+                ></textarea>
                 <p>Añade una imagen</p>
                 <input class="image-input" type="file" accept="image/*" />
                 <p>De parte de:</p>
@@ -68,19 +70,16 @@
               </div>
             </div>
           </div>
-          <button class="create-card-btn">Crear Tarjeta
-          </button>
-         
+          <button type="submit" class="create-card-btn">CREAR TARJETA</button>
         </form>
       </div>
       <div class="preview-container">
-        <button class="reset-btn">Resetear Diseño</button>
-        <div class="preview-card">
+        <div id="preview-card" class="preview-card">
           <p class="date-value">01/01/2026</p>
+          <p class="email-value">lucia@gmail.com</p>
           <div class="card-content">
             <div class="card-text">
               <p class="name-value">Para Lucía</p>
-              <p class="email-value">lucia@gmail.com</p>
               <p class="message-value">¡Feliz cumpleaños!</p>
               <p class="sender-value">María</p>
             </div>
@@ -89,9 +88,10 @@
             </div>
           </div>
         </div>
+        <button class="reset-btn">RESETEAR DISEÑO</button>
       </div>
     </main>
-
+    <load src="./partials/footer.html" />
     <script type="module" src="./js/main.js"></script>
   </body>
 </html>
