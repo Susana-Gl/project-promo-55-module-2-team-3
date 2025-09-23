@@ -181,7 +181,8 @@ button {
     height: 197px;
   }
 
-  .message-input, .image-input {
+  .message-input,
+  .image-input {
     width: 300px;
   }
 
@@ -190,7 +191,8 @@ button {
     width: 75px;
   }
 
-  .date-value, .email-value {
+  .date-value,
+  .email-value {
     font-size: 8px;
   }
 
@@ -206,8 +208,8 @@ button {
     padding: 5px;
   }
 
-  .create-card-btn, .reset-btn {
+  .create-card-btn,
+  .reset-btn {
     font-size: 12px;
   }
-
 }

@@ -9,7 +9,6 @@ console.log(">> Ready :)");
 
 const background = document.getElementById("background");
 
-
 const nameInput = document.querySelector(".name-input");
 const emailInput = document.querySelector(".email-input");
 const dateInput = document.querySelector(".date-input");
@@ -53,8 +52,12 @@ if (localStorage.getItem("sender")) {
   senderValue.textContent = senderInput.value;
 }
 
-const accordionHeaders = document.querySelectorAll(".accordion-header");
+if (localStorage.getItem("image")) {
+  const savedImage = localStorage.getItem("image");
+  imageValue.src = savedImage;
+}
 
+const accordionHeaders = document.querySelectorAll(".accordion-header");
 
 accordionHeaders.forEach((header) => {
   header.addEventListener("click", () => {
@@ -74,6 +77,15 @@ const handleClickReset = () => {
   messageValue.textContent = "¡Feliz cumpleaños!";
   senderInput.value = "";
   senderValue.textContent = "María";
+  imageInput.src = "";
+  imageValue.src = "./images/default.png";
+  localStorage.removeItem("name");
+  localStorage.removeItem("email");
+  localStorage.removeItem("date");
+  localStorage.removeItem("message");
+  localStorage.removeItem("sender");
+  localStorage.removeItem("background");
+  localStorage.removeItem("image");
 };
 
 resetButton.addEventListener("click", handleClickReset);
@@ -91,43 +103,41 @@ const handleChangeSelect = () => {
     previewCard.classList.add("valentine");
     previewCard.classList.remove("christmas", "birthday");
   }
-  localStorage.setItem ("background", backgroundResult);
+  localStorage.setItem("background", backgroundResult);
 };
 
 background.addEventListener("change", handleChangeSelect);
 
 if (localStorage.getItem("background")) {
   background.value = localStorage.getItem("background");
-  handleChangeSelect ();
+  handleChangeSelect();
   console.log(background.value);
 }
 
 nameInput.addEventListener("input", () => {
   nameValue.textContent = "Para " + nameInput.value;
-  localStorage.setItem ("name", nameInput.value);
+  localStorage.setItem("name", nameInput.value);
 });
 
 emailInput.addEventListener("input", () => {
   emailValue.textContent = emailInput.value;
-  localStorage.setItem ("email", emailInput.value);
+  localStorage.setItem("email", emailInput.value);
 });
 
 dateInput.addEventListener("input", () => {
   dateValue.textContent = dateInput.value;
-  localStorage.setItem ("date", dateInput.value);
+  localStorage.setItem("date", dateInput.value);
 });
 
 messageInput.addEventListener("input", () => {
   messageValue.textContent = messageInput.value;
-  localStorage.setItem ("message", messageInput.value);
+  localStorage.setItem("message", messageInput.value);
 });
 
 senderInput.addEventListener("input", () => {
   senderValue.textContent = senderInput.value;
-  localStorage.setItem ("sender", senderInput.value);
+  localStorage.setItem("sender", senderInput.value);
 });
-
-// Duda Ana !
 
 imageInput.addEventListener("change", () => {
   const file = imageInput.files[0];
@@ -136,7 +146,7 @@ imageInput.addEventListener("change", () => {
     reader.onload = () => {
       const saveImage = reader.result;
       imageValue.src = saveImage;
-      localStorage.setItem ("image", saveImage);
+      localStorage.setItem("image", saveImage);
     };
     reader.readAsDataURL(file);
   }
@@ -148,10 +158,4 @@ if (imageDefault !== "") {
   imageValue.src = imageDefault;
 } else {
   imageValue.src = "./images/default.png";
-}
-
-if (localStorage.getItem("image")) {
-  imageInput.value = localStorage.getItem("image");
-  imageValue.src = saveImage.value;
-  console.log(saveImage);
 }
