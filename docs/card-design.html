@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Una carta para ti</title>
+    <link
+      href="https://fonts.google.com/specimen/Sansation?categoryFilters=Feeling:%2FExpressive%2FBusiness"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Imperial+Script&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    
+    <link rel="icon" href="./images/sobre-icono.jpg" />
+    <script type="module" crossorigin src="./assets/main-5da2984b.js"></script>
+    <script type="module" crossorigin src="./js/main.js"></script>
+    <link rel="stylesheet" href="./assets/main-cf4f4c2b.css">
+  </head>
+
+  <body>
+    <main class="main-card">
+      <div class="form-card">
+        <form>
+          <div class="accordion-section active">
+            <div class="accordion-header">
+              <h2>Diseña</h2>
+              <span class="accordion-icon">▼</span>
+            </div>
+            <div class="accordion-content">
+              <div class="design-card">
+                <p>Escoge la ocasión</p>
+                <select name="background" id="background">
+                  <option value="birthday">Cumpleaños</option>
+                  <option value="christmas">Navidad</option>
+                  <option value="valentine">San Valentín</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-section">
+            <div class="accordion-header">
+              <h2>Rellena</h2>
+              <span class="accordion-icon">▼</span>
+            </div>
+            <div class="accordion-content">
+              <div class="info-card">
+                <p>¿Para quién es?</p>
+                <input class="name-input" placeholder="Para:  " required />
+                <input
+                  type="email"
+                  class="email-input"
+                  placeholder="email del destinatario"
+                  required
+                />
+                <p>¿Cuándo quieres enviarla?</p>
+                <input class="date-input" type="date" />
+                <p>Tu mensaje</p>
+                <textarea
+                  rows="6"
+                  cols="40"
+                  class="message-input"
+                  placeholder="Escribe aquí tu mensaje"
+                  required
+                ></textarea>
+                <p>Añade una imagen</p>
+                <input class="image-input" type="file" accept="image/*" />
+                <p>De parte de:</p>
+                <input class="sender-input" placeholder="Tu nombre" required />
+              </div>
+            </div>
+          </div>
+          <button type="submit" class="create-card-btn">CREAR TARJETA</button>
+        </form>
+      </div>
+      <div class="preview-container">
+        <div id="preview-card" class="preview-card">
+          <p class="date-value">01/01/2026</p>
+          <p class="email-value">lucia@gmail.com</p>
+          <div class="card-content">
+            <div class="card-text">
+              <p class="name-value">Para Lucía</p>
+              <p class="message-value">¡Feliz cumpleaños!</p>
+              <p class="sender-value">María</p>
+            </div>
+            <div class="image-container">
+              <img class="image-value" src="" />
+            </div>
+          </div>
+        </div>
+        <button class="reset-btn">RESETEAR DISEÑO</button>
+      </div>
+    </main>
+    <footer>
+  <div class="footer-container">
+    <p>Letters for you &copy;</p>
+  </div>
+</footer>
+
+    
+  </body>
+</html>
