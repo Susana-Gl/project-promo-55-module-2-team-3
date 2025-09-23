@@ -4,15 +4,15 @@ Una aplicación web interactiva para crear tarjetas personalizadas con nombre, m
 
 ## 📦 Características
 
-- 📝 Formulario con campos para nombre, email, fecha, mensaje, remitente e imagen.
+- Formulario con campos para nombre, email, fecha, mensaje, remitente e imagen.
 
-- 🎨 Vista previa en tiempo real con fondo temático (cumpleaños, Navidad, San Valentín).
+- Vista previa en tiempo real con fondo temático (cumpleaños, Navidad, San Valentín).
 
-- 💾 Persistencia automática con localStorage.
+- Persistencia automática con localStorage.
 
-- 🔄 Botón de reseteo que limpia los campos y restaura valores por defecto.
+- Botón de reseteo que limpia los campos y restaura valores por defecto.
 
-- 📁 Carga de imagen personalizada con almacenamiento en base64.
+- Carga de imagen personalizada
 
 ## 🚀 Cómo usar
 
@@ -47,5 +47,3 @@ Una aplicación web interactiva para crear tarjetas personalizadas con nombre, m
 - Permitir descargar la tarjeta en PDF.
 
 - Añadir más temas visuales.
-
-- Mejorar accesibilidad y diseño responsivo.
