@@ -2,11 +2,6 @@
 
 import "./share.js";
 
-console.log(">> Ready :)");
-
-// let savedName = localstorage.getItem("name");
-// nameValue.appendchild(savedName);
-
 const background = document.getElementById("background");
 
 const nameInput = document.querySelector(".name-input");
@@ -30,32 +25,34 @@ const senderValue = document.querySelector(".sender-value");
 if (localStorage.getItem("name")) {
   nameInput.value = localStorage.getItem("name");
   nameValue.textContent = "Para " + nameInput.value;
-}
+};
 
 if (localStorage.getItem("email")) {
   emailInput.value = localStorage.getItem("email");
   emailValue.textContent = emailInput.value;
-}
+};
 
 if (localStorage.getItem("date")) {
   dateInput.value = localStorage.getItem("date");
   dateValue.textContent = dateInput.value;
-}
+};
 
 if (localStorage.getItem("message")) {
   messageInput.value = localStorage.getItem("message");
   messageValue.textContent = messageInput.value;
-}
+};
 
 if (localStorage.getItem("sender")) {
   senderInput.value = localStorage.getItem("sender");
   senderValue.textContent = senderInput.value;
-}
+};
 
 if (localStorage.getItem("image")) {
   const savedImage = localStorage.getItem("image");
   imageValue.src = savedImage;
-}
+} else {
+  imageValue.src = "./images/default.png";
+};
 
 const accordionHeaders = document.querySelectorAll(".accordion-header");
 
@@ -77,8 +74,10 @@ const handleClickReset = () => {
   messageValue.textContent = "¡Feliz cumpleaños!";
   senderInput.value = "";
   senderValue.textContent = "María";
-  imageInput.src = "";
+  imageInput.value = "";
   imageValue.src = "./images/default.png";
+  previewCard.classList.add("birthday");
+  previewCard.classList.remove("christmas", "valentine");
   localStorage.removeItem("name");
   localStorage.removeItem("email");
   localStorage.removeItem("date");
@@ -111,8 +110,7 @@ background.addEventListener("change", handleChangeSelect);
 if (localStorage.getItem("background")) {
   background.value = localStorage.getItem("background");
   handleChangeSelect();
-  console.log(background.value);
-}
+};
 
 nameInput.addEventListener("input", () => {
   nameValue.textContent = "Para " + nameInput.value;
@@ -151,11 +149,3 @@ imageInput.addEventListener("change", () => {
     reader.readAsDataURL(file);
   }
 });
-
-let imageDefault = "";
-
-if (imageDefault !== "") {
-  imageValue.src = imageDefault;
-} else {
-  imageValue.src = "./images/default.png";
-}
